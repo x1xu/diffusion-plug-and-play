@@ -1,0 +1,19 @@
+conditioning:
+  method: lgd
+  params:
+    scale: 400.
+    lambda: 0.001
+
+data:
+  name: general
+  root: ./data/ffhq
+
+measurement:
+  operator:
+    name: coded_pr
+    oversample: 4.0
+
+  noise: 
+    name: gaussian
+    sigma: 0.2
+

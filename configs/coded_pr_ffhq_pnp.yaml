@@ -1,0 +1,27 @@
+conditioning:
+  method: mala
+  params:
+    scale: 0.8
+  nonunique_color: False
+  initializer:
+    method: ps
+    params:
+      scale: 0.8
+
+data:
+  name: general
+  root: ./data/ffhq
+  # Uncomment the following and change the root therein to initialize with given images (e.g. outputs of LGD-MC)
+  # init_config:
+  #   name: general
+  #   root: ./results/coded_pr/recon/
+
+measurement:
+  operator:
+    name: coded_pr
+    oversample: 4.0
+
+  noise: 
+    name: gaussian
+    sigma: 0.2
+

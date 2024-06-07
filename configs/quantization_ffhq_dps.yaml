@@ -1,0 +1,19 @@
+conditioning:
+  method: ps
+  params:
+    scale: 100.0
+
+data:
+  name: general
+  root: ./data/ffhq
+
+measurement:
+  operator:
+    name: quantization
+    dither_name: logit
+    intensity: 0.4
+
+  noise: 
+    name: gaussian
+    sigma: 0.0
+

@@ -1,0 +1,18 @@
+conditioning:
+  method: lgd
+  params:
+    scale: 400.
+
+data:
+  name: general
+  root: ./data/imagenet/
+
+measurement:
+  operator:
+    name: coded_pr
+    oversample: 4.0
+
+  noise: 
+    name: gaussian
+    sigma: 0.2
+

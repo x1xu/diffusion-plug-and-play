@@ -1,0 +1,20 @@
+conditioning:
+  method: lgd
+  params:
+    scale: 500.0
+    lambda: 0.00002
+
+data:
+  name: general
+  root: ./data/imagenet/
+
+measurement:
+  operator:
+    name: quantization
+    dither_name: logit
+    intensity: 0.4
+
+  noise: 
+    name: gaussian
+    sigma: 0.0
+

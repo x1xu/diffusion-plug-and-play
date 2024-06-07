@@ -1,0 +1,14 @@
+sampler: ddim-pnp
+steps: 1000
+noise_schedule: linear
+model_mean_type: epsilon 
+model_var_type: learned_range
+dynamic_threshold: False
+clip_denoised: True
+rescale_timesteps: False
+timestep_respacing: 1000
+params:
+  eta_max: 0.4
+  eta_min: 0.16
+  k_start: 4
+  k: 12

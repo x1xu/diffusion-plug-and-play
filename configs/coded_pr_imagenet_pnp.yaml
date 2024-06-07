@@ -1,0 +1,27 @@
+conditioning:
+  method: mala
+  params:
+    scale: 1.2
+  nonunique_color: False   # Changing this to True sometimes improves the performance for phase retrieval
+  initializer:
+    method: lgd
+    params:
+      scale: 400.
+
+data:
+  name: general
+  root: ./data/imagenet/
+  # Uncomment the following and change the root therein to initialize with given images (e.g. outputs of LGD-MC)
+  # init_config:
+  #   name: general
+  #   root: ./results/coded_pr/recon/
+
+measurement:
+  operator:
+    name: coded_pr
+    oversample: 4.0
+
+  noise: 
+    name: gaussian
+    sigma: 0.2
+
